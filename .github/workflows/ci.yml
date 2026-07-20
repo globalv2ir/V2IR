@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build & Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v3
+
+      - name: Download Xray binaries
+        # Skip download on CI — binaries are excluded from git.
+        # The build will succeed without them; VPN functionality requires
+        # binaries at runtime (see README: ./gradlew downloadBinaries).
+        # On CI we only verify the code compiles and lint passes.
+        run: echo "Skipping binary download on CI (see README for local setup)"
+
+      - name: Create placeholder geo assets for build
+        # Room schema export and resource compilation require assets dir to exist.
+        run: |
+          mkdir -p app/src/main/assets/xray/arm64-v8a
+          mkdir -p app/src/main/assets/xray/x86_64
+          touch app/src/main/assets/geoip.dat
+          touch app/src/main/assets/geosite.dat
+
+      - name: Run lint
+        run: ./gradlew :app:lintDebug
+
+      - name: Build debug APK
+        run: ./gradlew :app:assembleDebug
+
+      - name: Upload lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: app/build/reports/lint-results-debug.html
+          retention-days: 7
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 7

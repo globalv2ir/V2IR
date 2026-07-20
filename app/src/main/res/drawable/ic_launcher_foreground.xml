@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  V2IR App Icon Foreground
+  Design: Lion head merged with "V" shape in Iran flag gradient (green→white→red)
+  Text: "V2IR" in gold below the logo
+  Canvas: 108x108dp (safe zone: center 72x72dp = 18..90)
+-->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- ═══════════════════════════════════════════════
+         V SHAPE — left stroke (green, Iran flag color)
+         ═══════════════════════════════════════════════ -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#2E7D32"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M28,22 L54,62"/>
+
+    <!-- V SHAPE — right stroke upper (white/silver) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#E8E8E8"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M54,62 L72,30"/>
+
+    <!-- V SHAPE — right stroke lower (red, Iran flag color) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C62828"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M72,30 L80,22"/>
+
+    <!-- Small circle on V left tip (green accent) -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M28,22 m-3.5,0 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0"/>
+
+    <!-- ═══════════════════════════════════════════════
+         LION HEAD — simplified profile facing right
+         Body built from bezier curves
+         ═══════════════════════════════════════════════ -->
+
+    <!-- Lion mane — outer shape (gradient-like: green top, white mid, red bottom) -->
+    <!-- Mane top-left green -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M58,28 C55,22 50,20 47,23 C44,26 44,30 46,33 C49,28 54,27 58,28 Z"/>
+
+    <!-- Mane top-right -->
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M58,28 C62,23 68,22 70,26 C72,29 71,33 69,35 C67,30 63,28 58,28 Z"/>
+
+    <!-- Lion face/head body — silver-white -->
+    <path
+        android:fillColor="#D0D0D0"
+        android:pathData="M46,33 C44,38 44,44 47,48 C50,52 55,54 60,52 C65,50 68,46 69,41 C70,36 69,32 67,29 C64,33 60,35 56,35 C52,35 48,34 46,33 Z"/>
+
+    <!-- Lion snout/muzzle -->
+    <path
+        android:fillColor="#E8E8E8"
+        android:pathData="M55,44 C53,44 51,46 51,48 C51,50 53,52 56,52 C59,52 62,50 63,48 C63,46 61,44 59,44 Z"/>
+
+    <!-- Lion nose (red) -->
+    <path
+        android:fillColor="#B71C1C"
+        android:pathData="M57,45 C56,45 55,46 55,47 C55,48 56,48.5 57,48.5 C58,48.5 59,48 59,47 C59,46 58,45 57,45 Z"/>
+
+    <!-- Lion eye -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M60,37 C59,36.5 58,37 58,38 C58,39 59,39.5 60,39 C61,38.5 61,37.5 60,37 Z"/>
+
+    <!-- Eye highlight -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60.5,37.5 C60.2,37.3 59.8,37.5 59.8,37.8 C59.8,38 60.1,38.1 60.4,38 C60.7,37.9 60.7,37.6 60.5,37.5 Z"/>
+
+    <!-- Lion ear (right side of face) -->
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M67,29 C68,26 70,24 72,25 C73,26 73,28 72,30 C70,29 68,29 67,29 Z"/>
+
+    <!-- Mane flowing left (red/crimson lower) -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M46,33 C42,36 40,40 41,44 C42,48 45,50 47,48 C45,44 45,38 46,33 Z"/>
+
+    <!-- Mane flowing right (dark navy shadow) -->
+    <path
+        android:fillColor="#1A237E"
+        android:pathData="M69,35 C72,38 73,42 72,46 C71,50 69,52 67,50 C69,46 70,40 69,35 Z"/>
+
+    <!-- Lion chin/jaw -->
+    <path
+        android:fillColor="#B0B0B0"
+        android:pathData="M47,48 C48,52 51,55 55,56 C58,57 62,56 64,54 C66,52 67,50 67,50 C64,52 60,53 56,52 C52,51 49,50 47,48 Z"/>
+
+    <!-- Whisker marks (subtle) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#A0A0A0"
+        android:strokeWidth="0.8"
+        android:pathData="M51,48 L47,47"/>
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#A0A0A0"
+        android:strokeWidth="0.8"
+        android:pathData="M51,49.5 L46,49"/>
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#A0A0A0"
+        android:strokeWidth="0.8"
+        android:pathData="M62,48 L66,47"/>
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#A0A0A0"
+        android:strokeWidth="0.8"
+        android:pathData="M62,49.5 L67,49"/>
+
+    <!-- ═══════════════════════════════════════════════
+         "V2IR" TEXT — gold color
+         Positioned at bottom of safe zone
+         ═══════════════════════════════════════════════ -->
+
+    <!-- V letter -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M30,68 L35,82 L40,68 L37.5,68 L35,78 L32.5,68 Z"/>
+
+    <!-- 2 letter -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M43,68 C43,68 48,68 48,71 C48,74 43,76 43,79 L48,79 L48,82 L41,82 L41,79 C41,79 46,76 46,73 C46,71 44,70 43,70 Z"/>
+
+    <!-- I letter -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M51,68 L53,68 L53,82 L51,82 Z"/>
+    <!-- I serifs -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M49.5,68 L54.5,68 L54.5,70 L49.5,70 Z"/>
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M49.5,80 L54.5,80 L54.5,82 L49.5,82 Z"/>
+
+    <!-- R letter -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M57,68 L57,82 L59,82 L59,76 L62,76 L65,82 L67.5,82 L64,75.5 C65.5,75 67,73.5 67,71.5 C67,69.5 65.5,68 63,68 Z M59,70 L63,70 C64,70 65,70.8 65,72 C65,73.2 64,74 63,74 L59,74 Z"/>
+
+</vector>
